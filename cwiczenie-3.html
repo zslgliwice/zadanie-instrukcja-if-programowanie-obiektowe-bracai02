@@ -21,7 +21,36 @@
 	
 		function ktora_cwiartka()
 		{
-			
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+			if(x>0 && y>0){
+			document.getElementById("wynik").innerHTML = "Jestes w 1 czwiarcze";
+
+			}
+			if(x<0 && y>0){
+			document.getElementById("wynik").innerHTML = "Jestes w 2 czwiarcze";
+
+			}
+			if(x>0 && y<0){
+			document.getElementById("wynik").innerHTML = "Jestes w 4 czwiarcze";
+
+			}
+			if(x<0 && y<0){
+			document.getElementById("wynik").innerHTML = "Jestes w 3 czwiarcze";
+
+			}
+			if(x==0 && y!=0 || x!=0 && y==0){
+			document.getElementById("wynik").innerHTML = "Punkt leży na jednej z osi układu";
+
+			}
+			if(x==0 && y==0){
+			document.getElementById("wynik").innerHTML = "Jest początkiem układu współrzędnych";
+
+			}
+			if(x==15 && y==96){
+			document.getElementById("wynik").innerHTML = "krótki zarys życiorysu Kartezjusza";
+
+			}
 			
 		}
 

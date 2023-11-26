@@ -26,10 +26,61 @@
 			var a = document.getElementById('a').value;
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
+			var d = a;
+			var e = b;
+			var f = c;
+			var naj = Math.min(a,b,c)
+			var wie = Math.max(a,b,c)
 			
 			
-		}
+			if(a<0)
+			{
 
+				d = a * -1
+			}
+			if(b<0)
+			{
+
+				e = b * -1
+			}
+			if(c<0)
+			{
+
+				f = c * -1
+			}
+			
+			document.getElementById("wynik").innerHTML += "<p>"+naj+"</p>";
+			document.getElementById("wynik").innerHTML += "<p>"+wie+"</p>";
+			document.getElementById("wynik").innerHTML += "<p>"+d+" "+e+" "+f+"</p>";
+			if(a%2==0)
+			{
+				document.getElementById("wynik").innerHTML += "<p>"+a+"jest parzysty"+"</p>";
+			}
+			else{
+			document.getElementById("wynik").innerHTML += "<p>"+a+"jest nieparzysty"+"</p>";
+			}
+			if(b%2==0)
+			{
+
+				
+				document.getElementById("wynik").innerHTML += "<p>"+b+"jest parzysty"+"</p>";
+			}
+			else{
+			document.getElementById("wynik").innerHTML += "<p>"+b+"jest nieparzysty"+"</p>";
+			}
+			if(c%2==0)
+			
+			{
+
+				
+				document.getElementById("wynik").innerHTML += "<p>"+c+"jest parzysty"+"</p>";
+			}
+		else {
+			document.getElementById("wynik").innerHTML += "<p>"+c+"jest nieparzysty"+"</p>";
+		 	}
+
+		}
+				
 	</script>
 
 </body>

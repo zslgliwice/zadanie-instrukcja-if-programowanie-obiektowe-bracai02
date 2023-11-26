@@ -22,7 +22,30 @@
 	
 		function sprawdz()
 		{
+			var x = document.getElementById("wiek").value;
+				
+			x = parseInt(x);
+			let text = document.getElementById("imie").value;
+			let result = text.toLowerCase();
 			
+			
+			if(x<16)
+			{
+				document.getElementById("wynik").innerHTML = "Nie może wziąć udziału w seansie";
+				
+			}
+			if(x>=16 && x<=17)
+			{
+				document.getElementById("wynik").innerHTML = "mozesz wziąć udział jesli jestes z opiekunem za 12zł";
+			}
+			if(x>=18)
+			{
+				document.getElementById("wynik").innerHTML = "mozesz wziąć udział za 18 zł";
+			}
+			if(x>=18 && result=="brad" ||x>=18 && result=="morgan"  )
+			{
+				document.getElementById("wynik").innerHTML = "mozesz wziąć udział za DARMO";
+			}
 			
 		}
 

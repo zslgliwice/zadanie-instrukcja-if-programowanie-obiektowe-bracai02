@@ -4,49 +4,32 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>2 - Instrukcja warunkowa w JavaScript</title>
+	<title>1 - Pętle w JavaScript</title>
 	<link href="arkusz-cwiczenia.css" rel="stylesheet">
 	
 </head>
 
 <body>
-
-	<label> Podaj imię: <input type="text" id="imie"> </label>
-	<label> Podaj wiek: <input type="number" id="wiek"> </label>
+	 
+	<label>
+		Ile liczb z przedziału 1-1000 wylosować: <input type="number" id="ile">
+	</label>
 	
-	<input type="submit" value="Sprawdź udział" onclick="sprawdz()">
+	<input type="button" value="Losuj" onclick="wylosuj()">
 
-	<div id="wynik"></div>
+	<div id="wynik">Liczba: </div>
 	
 	<script>
 	
-		function sprawdz()
+		function wylosuj()
 		{
-			var x = document.getElementById("wiek").value;
-				
-			x = parseInt(x);
-			let text = document.getElementById("imie").value;
-			let result = text.toLowerCase();
+			var a = document.getElementById("ile").value
 			
-			
-			if(x<16)
-			{
-				document.getElementById("wynik").innerHTML = "Nie może wziąć udziału w seansie";
-				
-			}
-			if(x>=16 && x<=17)
-			{
-				document.getElementById("wynik").innerHTML = "mozesz wziąć udział jesli jestes z opiekunem za 12zł";
-			}
-			if(x>=18)
-			{
-				document.getElementById("wynik").innerHTML = "mozesz wziąć udział za 18 zł";
-			}
-			if(x>=18 && result=="brad" ||x>=18 && result=="morgan"  )
-			{
-				document.getElementById("wynik").innerHTML = "mozesz wziąć udział za DARMO";
-			}
-			
+			for (i=1; i<=a; i++)
+            {
+			    var liczba = Math.floor(Math.random() * 1000) + 1;
+			    document.getElementById("wynik").innerHTML += liczba + " ";
+            }
 		}
 
 	</script>
